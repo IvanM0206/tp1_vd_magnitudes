@@ -1,22 +1,9 @@
 <script>
 
   let numbers = [12.3, 30.75, 41, 76.26, 92.25, 123];
-  let color = "red";
 
 </script>
 
-
-
-<!---<div class="container">
-  {#each numbers as number}
-    <div class="row-wrapper">
-      <div class="row" style = "width: {number}px"></div>
-      <img class="battery-mask
-      -battery" src="./images/Vector.svg" alt = "">
-    </div>
-  {/each}
-</div>>
--->
 
 <div class="row-container">
   <h1>CARGAS DE BATERIAS</h1>
