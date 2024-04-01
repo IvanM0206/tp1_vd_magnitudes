@@ -1,40 +1,45 @@
 <script>
 
-  let numbers = [12.3, 30.75, 41, 76.26, 92.25, 123];
+  let numbers = [10, 25, 33, 62, 75, 100];
 
 </script>
 
 
 <div class="row-container">
   <h1>CARGAS DE BATERIA</h1>
+  <!--SEPARO EN CUATRO CASOS PORQUE CAMBIO EL COLOR (PARA EL 10% Y EL 25%) Y EL BORDE DE LA CARGA (PARA EL 100%)-->
   {#each numbers as number}
-  {#if number == 123}
+  <!--Borde más redondeado-->
+  {#if number == 100}
     <div class="row-wrapper">
-      <div class="row" style="width: {number}px; border-top-right-radius: 7%; border-bottom-right-radius: 7%;">
+      <div class="row" style="width: {number*1.23}px; border-top-right-radius: 7%; border-bottom-right-radius: 7%;">
       </div>
       <img class="battery-mask" src="./images/Vector.svg" alt="">
-      <p>{100*number/123}%</p>
+      <p>{number}%</p>
     </div>
-  {:else if number == 12.3}
+  <!--Color de bateria: rojo-->
+  {:else if number == 10}
   <div class="row-wrapper">
-    <div class="row" style="width: {number}px; background-color: red;">
+    <div class="row" style="width: {number*1.23}px; background-color: red;">
     </div>
     <img class="battery-mask" src="./images/Vector.svg" alt="">    
-    <p>{100*number/123}%</p>
+    <p>{number}%</p>
   </div>
-  {:else if number == 30.75}
+  <!--Color de bateria: amarillo-->
+  {:else if number == 25}
   <div class="row-wrapper">
-    <div class="row" style="width: {number}px; background-color: yellow;">
+    <div class="row" style="width: {number*1.23}px; background-color: yellow;">
     </div>
     <img class="battery-mask" src="./images/Vector.svg" alt=""> 
-    <p>{100*number/123}%</p>  
+    <p>{number}%</p>  
   </div>
+  <!--Color de bateria: blanco-->
   {:else}
   <div class="row-wrapper">
-    <div class="row" style="width: {number}px;">
+    <div class="row" style="width: {number*1.23}px;">
     </div>
     <img class="battery-mask" src="./images/Vector.svg" alt="">
-    <p>{Math.round(100*(number/123))}%</p>   
+    <p>{number}%</p>   
   </div>
   {/if}
   {/each}
