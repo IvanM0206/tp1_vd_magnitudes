@@ -6,7 +6,7 @@
 
 
 <div class="row-container">
-  <h1>CARGAS DE BATERIAS</h1>
+  <h1>CARGAS DE BATERIA</h1>
   {#each numbers as number}
   {#if number == 123}
     <div class="row-wrapper">
